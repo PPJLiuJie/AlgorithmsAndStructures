@@ -68,7 +68,7 @@ public class Question_28 {
 		StringBuilder sb = new StringBuilder();
 		
 		for (int i = 1; i <= n; i++) {
-			
+			/*
 			// i转成二进制
 			String binary_n = Integer.toBinaryString(i);
 			
@@ -87,6 +87,19 @@ public class Question_28 {
 			}
 			
 			System.out.println();
+			sb.delete(0, sb.length());
+			*/
+			
+			// 上面的方式，是将二进制转成字符串，然后获取该字符串中字符'1'的所有下标，然后根据该下标就能获取到对应的字符
+			
+			// 这里介绍一种更简单的方式
+			for (int j = 0; j < len; j++) {
+				// i&(1<<j) != 0 这个表达式的意思是：i的二进制表示形式的第j位为'1'
+				if ((i & (1<<j)) != 0) {
+					sb.append(ch[j]);
+				}
+			}
+			System.out.println(sb.toString());
 			
 			// 清空
 			sb.delete(0, sb.length());
