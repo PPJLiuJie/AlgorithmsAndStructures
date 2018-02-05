@@ -6,11 +6,15 @@ package com.java.lj.algorithm;
 public class Question_10 {
 
 	public static void main(String[] args) {
+		
+		MyPrintln.start("getCountOf_1");
 		System.out.println(getCountOf_1(0));
 		System.out.println(getCountOf_1(127));
 		// 注意：负数是以补码的形式存储的
 		System.out.println(getCountOf_1(-128));
+		MyPrintln.end("getCountOf_1");
 		
+		MyPrintln.start("judge");
 		System.out.println(judge(-2));
 		System.out.println(judge(-1));
 		System.out.println(judge(0));
@@ -19,10 +23,13 @@ public class Question_10 {
 		System.out.println(judge(6));
 		System.out.println(judge(8));
 		System.out.println(judge(2048));
+		MyPrintln.end("judge");
 		
+		MyPrintln.start("getCountOfChange");
 		System.out.println(getCountOfChange(10, 13));
 		System.out.println(getCountOfChange(0, 127));
 		System.out.println(getCountOfChange(10, 127));
+		MyPrintln.end("getCountOfChange");
 	}
 	
 	/**
