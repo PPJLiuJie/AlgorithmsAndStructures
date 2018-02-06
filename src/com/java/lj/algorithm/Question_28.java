@@ -107,6 +107,23 @@ public class Question_28 {
 	}
 
 	/**
+	 * 三、正方体顶点
+	 */
+	public static void cube() {
+		
+		// TODO ...
+	}
+	
+	/**
+	 * 四、国际象棋
+	 */
+	public static void chess() {
+		
+		// TODO ...
+		
+	}
+	
+	/**
 	 * 字符数组的某两个元素互换位置
 	 */
 	public static void swap(char[] ch, int j, int k) {
