@@ -61,8 +61,8 @@ public class Question_10 {
 	
 	
 	/**
-	 * 三、输入两个整数m和n
-	 * 计算需要改变m的二进制表示中的多少位才能得到n
+	 * 三、输入两个整数m和n<br>
+	 * 计算需要改变m的二进制表示中的多少位才能得到n<br>
 	 * 比如10的二进制表示为1010，13的二进制表示为1101，需要改变1010中的3位才能得到1101
 	 */
 	public static int getCountOfChange(int n, int m) {

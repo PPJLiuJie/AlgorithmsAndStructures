@@ -25,7 +25,7 @@ public class Question_9 {
 
 	
 	/**
-	 * 斐波那契数列:f(0) = 0,f(1) = 1,f(n) = f(n-1) + f(n-2)
+	 * 斐波那契数列:f(0) = 0,f(1) = 1,f(n) = f(n-1) + f(n-2)<br>
 	 * 求第n项的值
 	 */
 	public static long fibonacci(long n) {

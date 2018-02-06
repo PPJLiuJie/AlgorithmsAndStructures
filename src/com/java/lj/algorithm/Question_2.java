@@ -52,7 +52,7 @@ class Singleton_3 {
 }
 
 /**
- * 单例设计模式(懒汉式 改进版 线程安全)
+ * 单例设计模式(懒汉式 改进版 线程安全)<br>
  * 参考:http://blog.csdn.net/haoel/article/details/4028232
  */
 class Singleton_4 {
