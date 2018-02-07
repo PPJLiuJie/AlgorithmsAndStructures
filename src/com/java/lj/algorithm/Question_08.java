@@ -3,7 +3,7 @@ package com.java.lj.algorithm;
 /**
  * 面试题8
  */
-public class Question_8 {
+public class Question_08 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -3,7 +3,7 @@ package com.java.lj.algorithm;
 /**
  * 面试题3
  */
-public class Question_3 {
+public class Question_03 {
 
 	public static void main(String[] args) {
 		

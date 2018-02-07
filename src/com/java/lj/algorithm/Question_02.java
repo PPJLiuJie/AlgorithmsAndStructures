@@ -3,7 +3,7 @@ package com.java.lj.algorithm;
 /**
  * 面试题2 单例设计模式
  */
-public class Question_2 {
+public class Question_02 {
 	
 }
 

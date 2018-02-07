@@ -3,7 +3,7 @@ package com.java.lj.algorithm;
 /**
  * 面试题9
  */
-public class Question_9 {
+public class Question_09 {
 
 	public static void main(String[] args) {
 		MyPrintln.start("fibonacci");
