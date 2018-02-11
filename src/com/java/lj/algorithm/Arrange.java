@@ -50,8 +50,9 @@ public class Arrange {
 	 * 3.第一轮遍历结束后，交换arr[0]和arr[minIndex]的位置，此时arr[0]就是数组中的最小值<br>
 	 * 
 	 * 4.同理，从arr[1]至arr[len-1]遍历数组，第二轮遍历结束后，arr[1]就是数组中的第二小的值<br>
-	 * ...
-	 * ...
+	 * ...<br>
+	 * ...<br>
+	 * (n-1) + (n-2) + (n-3) + ... + 1 约等于  1/2(n^2)
 	 * 时间复杂度为O(n^2)，但是选择排序无疑要比冒泡排序快，因为元素交换位置的次数要比冒泡排序少
 	 */
 	public static void selectionSort(int[] arr) {
@@ -68,29 +69,29 @@ public class Arrange {
 	}
 	
 	/**
-	 * 插入排序
+	 * 插入排序<br>
+	 * arr[0]~arr[0]是有序的，将arr[1]插入一个合适的位置，使得arr[0]~arr[1]有序<br>
+	 * arr[0]~arr[1]是有序的，将arr[2]插入一个合适的位置，使得arr[0]~arr[2]有序<br>
+	 * ...<br>
+	 * ...<br>
+	 * arr[0]~arr[len-2]是有序的，将arr[len-1]插入一个合适的位置，使得arr[0]~arr[len-1]有序
+	 * 
+	 * 第一趟排序最多比较1次，第二趟最多比较2次，...，第n-1趟最多比较n-1次
+	 * 所以 1+2+3+...+(n-1) 约等于 1/2(n^2)，由于算的是最多次数，所以除以2得平均次数为1/4(n^2)
+	 * 时间复杂度为O(n^2)，但插入排序比冒泡排序快一倍，比选择排序略快
 	 */
 	public static void insertSort(int[] arr) {
 		int len = arr.length;
 		for (int i = 1; i < len; i++) {
 			int temp = arr[i];
-			int j = i - 1;
-			while(j > 0 && arr[j] > temp) {
+			int j = i;
+			while(j > 0 && arr[j -1] >= temp) {
 				arr[j] = arr[j - 1];
 				j--;
 			}
 			arr[j] = temp;
 		}
 	}
-	
-	
-	/**
-	 * 快速排序
-	 */
-	
-	/**
-	 * 对象排序
-	 */
 	
 	private static void swap(int[] arr, int j, int k) {
 		int temp = arr[j];
