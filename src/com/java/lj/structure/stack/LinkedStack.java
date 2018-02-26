@@ -1,13 +1,36 @@
 package com.java.lj.structure.stack;
+
+import java.io.Serializable;
+import java.util.EmptyStackException;
+
+import com.java.lj.structure.linked.Node;
+
 /**
  * 链式栈
  */
-public class LinkedStack<T> implements Stack<T> {
+public class LinkedStack<T> implements Stack<T>, Serializable {
 
+	private static final long serialVersionUID = 6614019613801211449L;
+
+	private Node<T> top;
+	
+	private int size;
+	
+	public LinkedStack() {
+		this.top = new Node<>();
+	}
+	
+	public int size() {
+		return size;
+	}
+	
 	@Override
-	public void push(T t) {
-		// TODO Auto-generated method stub
+	public void push(T data) {
+		if (data == null) {
+			throw new StackException("data can not be null");
+		}
 
+		
 	}
 
 	@Override
@@ -24,8 +47,7 @@ public class LinkedStack<T> implements Stack<T> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return (top == null || top.data == null);
 	}
 
 }
