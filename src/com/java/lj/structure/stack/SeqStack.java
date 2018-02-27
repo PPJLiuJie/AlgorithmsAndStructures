@@ -1,7 +1,6 @@
 package com.java.lj.structure.stack;
 
 import java.io.Serializable;
-import java.util.EmptyStackException;
 
 /**
  * 顺序栈
@@ -53,7 +52,7 @@ public class SeqStack<T> implements Stack<T> , Serializable{
 	@Override
 	public T pop() {
 		if (isEmpty()) {
-			new EmptyStackException();
+			throw new EmptyStackException("Stack Empty");
 		}
 		size--;
 		return array[top--];
@@ -62,7 +61,7 @@ public class SeqStack<T> implements Stack<T> , Serializable{
 	@Override
 	public T peek() {
 		if (isEmpty()) {
-			new EmptyStackException();
+			throw new EmptyStackException("Stack Empty");
 		}
 		return array[top];
 	}
@@ -89,4 +88,18 @@ public class SeqStack<T> implements Stack<T> , Serializable{
 		}
 	}
 	
+	public static void main(String[] args) {
+		SeqStack<String> seqStack = new SeqStack<>();
+		seqStack.push("A");
+		seqStack.push("B");
+		seqStack.push("C");
+		
+		int s = seqStack.size;
+		
+		for (int i = 0; i < s; i++) {
+			System.out.println("seqStack.pop->" + seqStack.pop());
+		}
+		
+//		System.out.println("seqStack.peek->" +  seqStack.peek());
+	}
 }

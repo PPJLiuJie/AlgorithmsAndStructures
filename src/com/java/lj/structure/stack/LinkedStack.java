@@ -1,7 +1,6 @@
 package com.java.lj.structure.stack;
 
 import java.io.Serializable;
-import java.util.EmptyStackException;
 
 import com.java.lj.structure.linked.Node;
 
@@ -30,19 +29,36 @@ public class LinkedStack<T> implements Stack<T>, Serializable {
 			throw new StackException("data can not be null");
 		}
 
-		
+		if (top == null) {
+			top = new Node<>(data);
+		} else if (top.data == null) {
+			top.data = data;
+		} else {
+			Node<T> p = new Node<>(data, top);
+			top = p;
+		}
+		size++;
 	}
 
 	@Override
 	public T pop() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		if (isEmpty()) {
+			throw new EmptyStackException("Stack Empty");
+		}
+		
+		T data = top.data;
+		top = top.next;
+		size--;
+		return data;
 	}
 
 	@Override
 	public T peek() {
-		// TODO Auto-generated method stub
-		return null;
+		if (isEmpty()) {
+			throw new EmptyStackException("Stack Empty");
+		}
+		return top.data;
 	}
 
 	@Override
@@ -50,4 +66,20 @@ public class LinkedStack<T> implements Stack<T>, Serializable {
 		return (top == null || top.data == null);
 	}
 
+	// 测试
+	public static void main(String[] args) {
+		LinkedStack<String> linkedStack = new LinkedStack<>();
+		linkedStack.push("A");
+		linkedStack.push("B");
+		linkedStack.push("C");
+		
+		int s = linkedStack.size;
+		
+		for (int i = 0; i < s; i++) {
+			System.out.println("linkedStack.pop->" + linkedStack.pop());
+		}
+		
+//		System.out.println("linkedStack.peek->" + linkedStack.peek());
+	}
+	
 }
