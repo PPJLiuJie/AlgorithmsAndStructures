@@ -16,7 +16,7 @@ public interface Queue<T> {
 	boolean isEmpty();
 
 	/**
-	 * 入列，成功返回true，失败返回false
+	 * 入队，成功返回true，失败返回false
 	 */
 	boolean add(T data);
 	

@@ -66,20 +66,4 @@ public class LinkedStack<T> implements Stack<T>, Serializable {
 		return (top == null || top.data == null);
 	}
 
-	// 测试
-	public static void main(String[] args) {
-		LinkedStack<String> linkedStack = new LinkedStack<>();
-		linkedStack.push("A");
-		linkedStack.push("B");
-		linkedStack.push("C");
-		
-		int s = linkedStack.size;
-		
-		for (int i = 0; i < s; i++) {
-			System.out.println("linkedStack.pop->" + linkedStack.pop());
-		}
-		
-//		System.out.println("linkedStack.peek->" + linkedStack.peek());
-	}
-	
 }

@@ -87,19 +87,4 @@ public class SeqStack<T> implements Stack<T> , Serializable{
 			array[i] = old[i];
 		}
 	}
-	
-	public static void main(String[] args) {
-		SeqStack<String> seqStack = new SeqStack<>();
-		seqStack.push("A");
-		seqStack.push("B");
-		seqStack.push("C");
-		
-		int s = seqStack.size;
-		
-		for (int i = 0; i < s; i++) {
-			System.out.println("seqStack.pop->" + seqStack.pop());
-		}
-		
-//		System.out.println("seqStack.peek->" +  seqStack.peek());
-	}
 }

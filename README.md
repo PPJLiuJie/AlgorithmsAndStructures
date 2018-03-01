@@ -106,6 +106,10 @@
 
 栈本身是一个线性表，线性表的顺序存储和链式存储同样适用于栈。
 
+具体实现参见：<br>
+<a href="https://github.com/PPJLiuJie/AlgorithmsAndStructures/blob/dev/src/com/java/lj/structure/stack/SeqStack.java" target="_blank">SeqStack.java</a><br>
+<a href="https://github.com/PPJLiuJie/AlgorithmsAndStructures/blob/dev/src/com/java/lj/structure/stack/LinkedStack.java" target="_blank">LinkedStack.java</a>
+
 ----
 
 ### 1.3 队列
@@ -119,6 +123,10 @@
 插入数据只能在队尾进行， 删除数据只能在队头进行。
 
 队列本身是一个线性表，线性表的顺序存储和链式存储同样适用于栈。
+
+具体实现参见：<br>
+<a href="https://github.com/PPJLiuJie/AlgorithmsAndStructures/blob/dev/src/com/java/lj/structure/queue/SeqQueue.java" target="_blank">SeqQueue.java</a>　　用循环队列解决了“移动元素造成时间损耗”和“空间浪费”的问题<br>
+<a href="https://github.com/PPJLiuJie/AlgorithmsAndStructures/blob/dev/src/com/java/lj/structure/queue/LinkedQueue.java" target="_blank">LinkedQueue.java</a>
 
 ----
 
