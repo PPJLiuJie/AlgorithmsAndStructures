@@ -9,6 +9,7 @@ public class Test {
 		testSeqQueue();
 		
 		MyPrintln.start("testLinkedQueue");
+		testLinkedQueue();
 	}
 
 	private static void testSeqQueue() {
@@ -62,6 +63,42 @@ public class Test {
 		s = seqQueue.size();
 		for (int i = 0; i < s; i++) {
 			System.out.println("seqQueue.poll->" + seqQueue.poll());
+		}
+	}
+	
+	private static void testLinkedQueue() {
+		
+		LinkedQueue<String> linkedQueue = new LinkedQueue<>();
+		
+		linkedQueue.offer("a");
+		linkedQueue.offer("b");
+		linkedQueue.offer("c");
+		linkedQueue.offer("d");
+		linkedQueue.offer("e");
+		linkedQueue.offer("f");
+		
+		int s = linkedQueue.size();
+		for (int i = 0; i < s; i++) {
+			System.out.println("linkedQueue.poll->" + linkedQueue.poll());
+		}
+		linkedQueue.offer("g");
+		linkedQueue.offer("h");
+		linkedQueue.offer("i");
+		linkedQueue.offer("j");
+		linkedQueue.offer("k");
+		linkedQueue.offer("l");
+		linkedQueue.offer("m");
+		linkedQueue.offer("n");
+		linkedQueue.offer("o");
+		linkedQueue.offer("p");
+		linkedQueue.offer("q");
+		linkedQueue.offer("r");
+		linkedQueue.offer("s");
+		linkedQueue.offer("t");
+		System.out.println("---------");
+		s = linkedQueue.size();
+		for (int i = 0; i < s; i++) {
+			System.out.println("linkedQueue.poll->" + linkedQueue.poll());
 		}
 	}
 }
